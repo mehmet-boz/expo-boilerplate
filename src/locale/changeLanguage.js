@@ -7,4 +7,4 @@ const getTranslation = name => {
     return i18n.t(name, {locale: language});
 };
 
-export {getTranslation};
+export {getTranslation as t};

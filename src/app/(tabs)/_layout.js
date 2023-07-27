@@ -2,7 +2,7 @@ import FontAwesome from "@expo/vector-icons/FontAwesome"
 import {Link, Tabs} from "expo-router"
 import {Pressable, useColorScheme} from "react-native"
 import Colors from "../../constants/Colors";
-import {getTranslation} from "../../locale/changeLanguage";
+import {t} from "../../locale/changeLanguage";
 import {useNavigation} from "@react-navigation/native";
 
 /**
@@ -24,7 +24,7 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="index"
                 options={{
-                    title: getTranslation("home"),
+                    title: t("home"),
                     tabBarIcon: ({color}) => <TabBarIcon name="home" color={color}/>,
                     headerLeft: () => (
                         <Pressable onPress={() => {
@@ -62,7 +62,7 @@ export default function TabLayout() {
             <Tabs.Screen
                 name="two"
                 options={{
-                    title: getTranslation("settings"),
+                    title: t("settings"),
                     tabBarIcon: ({color}) => <TabBarIcon name="gear" color={color}/>
                 }}
             />
