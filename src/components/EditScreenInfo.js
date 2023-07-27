@@ -2,7 +2,7 @@ import React from "react"
 import {StyleSheet} from "react-native"
 import {MonoText} from "./StyledText"
 import {Text, View} from "./Themed"
-import {getTranslation} from "../locale/changeLanguage";
+import {t} from "../locale/changeLanguage";
 
 
 export default function EditScreenInfo({path}) {
@@ -14,7 +14,7 @@ export default function EditScreenInfo({path}) {
                     lightColor="rgba(0,0,0,0.8)"
                     darkColor="rgba(255,255,255,0.8)"
                 >
-                    {getTranslation("screen_info_text")}
+                    {t("screen_info_text")}
                 </Text>
 
                 <View
@@ -29,7 +29,7 @@ export default function EditScreenInfo({path}) {
                     style={styles.getStartedText}
                     className="text-md text-green-600 dark:text-cyan-300 mt-5 font-bold"
                 >
-                    {getTranslation("screen_info_styled")}
+                    {t("screen_info_styled")}
                 </Text>
             </View>
 

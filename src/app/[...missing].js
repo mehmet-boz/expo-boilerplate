@@ -2,16 +2,16 @@ import {Link, Stack} from "expo-router"
 import {StyleSheet} from "react-native"
 
 import {Text, View} from "@/src/components/Themed"
-import {getTranslation} from "../locale/changeLanguage";
+import {t} from "../locale/changeLanguage";
 
 export default function NotFoundScreen() {
     return (
         <>
-            <Stack.Screen options={{title: getTranslation("notfound_title")}}/>
+            <Stack.Screen options={{title: t("notfound_title")}}/>
             <View style={styles.container}>
-                <Text style={styles.title}>{getTranslation("notfound_text")}</Text>
+                <Text style={styles.title}>{t("notfound_text")}</Text>
                 <Link href="/" style={styles.link}>
-                    <Text style={styles.linkText}>{getTranslation("notfound_link")}</Text>
+                    <Text style={styles.linkText}>{t("notfound_link")}</Text>
                 </Link>
             </View>
         </>

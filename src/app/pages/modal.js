@@ -3,12 +3,12 @@ import {Platform, StyleSheet} from "react-native"
 
 import EditScreenInfo from "@/src/components/EditScreenInfo"
 import {Text, View} from "@/src/components/Themed"
-import {getTranslation} from "../../locale/changeLanguage";
+import {t} from "../../locale/changeLanguage";
 
 export default function ModalScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>{getTranslation("modal_title")}</Text>
+            <Text style={styles.title}>{t("modal_title")}</Text>
             <View
                 style={styles.separator}
                 lightColor="#eee"
