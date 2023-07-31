@@ -10,7 +10,7 @@ export default function NotFoundScreen() {
             <Stack.Screen options={{title: t("notfound_title")}}/>
             <View style={styles.container}>
                 <Text style={styles.title}>{t("notfound_text")}</Text>
-                <Link href="/" style={styles.link}>
+                <Link href="/home" style={styles.link}>
                     <Text style={styles.linkText}>{t("notfound_link")}</Text>
                 </Link>
             </View>

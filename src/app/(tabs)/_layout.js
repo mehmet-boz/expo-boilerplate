@@ -17,19 +17,19 @@ export default function TabLayout() {
     const navigation = useNavigation()
     return (
         <Tabs
+            initialRouteName="home"
             screenOptions={{
-                tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint
+                tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+
             }}
         >
             <Tabs.Screen
-                name="index"
+                name="home"
                 options={{
                     title: t("home"),
                     tabBarIcon: ({color}) => <TabBarIcon name="home" color={color}/>,
                     headerLeft: () => (
                         <Pressable onPress={() => {
-                            console.log(navigation)
-
                             navigation.openDrawer()
                         }}>
                             {({pressed}) => (
@@ -44,7 +44,7 @@ export default function TabLayout() {
 
                     ),
                     headerRight: () => (
-                        <Link href="/pages/modal" asChild>
+                        <Link href="/pages/index" asChild>
                             <Pressable>
                                 {({pressed}) => (
                                     <FontAwesome
@@ -60,7 +60,7 @@ export default function TabLayout() {
                 }}
             />
             <Tabs.Screen
-                name="two"
+                name="settings"
                 options={{
                     title: t("settings"),
                     tabBarIcon: ({color}) => <TabBarIcon name="gear" color={color}/>

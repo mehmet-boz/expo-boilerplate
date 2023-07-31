@@ -1,12 +1,12 @@
 import {View} from "react-native";
 import {DrawerContentScrollView, DrawerItem} from "@react-navigation/drawer";
 import {t} from "../locale/changeLanguage";
-import {router, useNavigation} from "expo-router";
+import {useNavigation, useRouter} from "expo-router";
 
 
 const CustomDrawerContent = (props) => {
     const navigation = useNavigation()
-
+    const router = useRouter()
     return (
         <View style={{flex: 1}}>
             <View style={{flex: 1}}>
@@ -21,8 +21,9 @@ const CustomDrawerContent = (props) => {
                     />
                     <DrawerItem
                         label="Modal"
-                        onPress={() => router.push("/pages/modal")}
+                        onPress={() => router.push("/pages")}
                     />
+
                 </DrawerContentScrollView>
             </View>
 

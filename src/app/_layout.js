@@ -1,13 +1,11 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome"
 import {DarkTheme, DefaultTheme, ThemeProvider} from "@react-navigation/native"
 import {useFonts} from "expo-font"
-import {SplashScreen} from "expo-router"
+import {SplashScreen, Stack} from "expo-router"
 import {useEffect} from "react"
 import {useColorScheme} from "react-native"
 import {Provider} from "react-redux";
 import {store} from "../store";
-import {Drawer} from "expo-router/drawer";
-import CustomDrawerContent from "../components/CustomDrawerContent";
 
 
 export {
@@ -51,17 +49,9 @@ function RootLayoutNav() {
     return (
         <Provider store={store}>
             <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-                <Drawer drawerContent={props => <CustomDrawerContent {...props} />}
-                        screenOptions={{
-                            headerShown: false,
-                            drawerActiveBackgroundColor: "#f5f4ff",
-                            drawerActiveTintColor: "#4E40A1",
-                            drawerInactiveTintColor: "#333",
-                            drawerLabelStyle: {
-                                fontSize: 16
-                            }
-                        }}>
-                </Drawer>
+                <Stack screenOptions={{headerShown: false}}>
+                    <Stack.Screen name="/(tabs)"/>
+                </Stack>
             </ThemeProvider>
         </Provider>
     )
